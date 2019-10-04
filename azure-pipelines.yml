@@ -10,7 +10,7 @@ pr:
 - releases/*
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'StarainLocal'
 
 steps:
 - script: echo $(System.AccessToken)!
