@@ -15,7 +15,13 @@ pool:
 steps:
 - script: echo $(System.AccessToken)!
   displayName: 'Run a one-line script'
-
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo $(System.AccessToken) >t.txt
+    workingDirectory: '$(build.sourcesdirectory)'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
