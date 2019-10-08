@@ -10,7 +10,7 @@ pr:
 - releases/*
 
 pool:
-  name: 'StarainLocal'
+  vmImage: 'vs2017-win2016'
 
 steps:
 - script: echo $(System.AccessToken)!
